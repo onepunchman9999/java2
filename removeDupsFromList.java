@@ -18,6 +18,16 @@ public List<Integer> remove(Node n) {
 }
 
 public List<Integer> remove(Node n) {
-	
+	while(n != null) {
+		Node curr = n.next;
+		while (curr.next != null) {
+			if (curr.val == n.val) {
+				curr.next = curr.next.next;
+			} else {
+			  curr = curr.next;
+			}
+		}
+		n = n.next;
+	}
 	
 }
