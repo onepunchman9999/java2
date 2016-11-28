@@ -1,6 +1,6 @@
-public ArrayList<LinkedList> createLevelList(Node root) {
-	List results = new ArrayList<LinkedList>();
-	List current = new ArrayList();
+public ArrayList<LinkedList> createLevelList(TreeNode root) {
+	ArrayList results = new ArrayList<LinkedList>();
+	LinkedList current = new LinkedList();
 
 	if (root != null) {
 		current.add(root);
@@ -8,7 +8,7 @@ public ArrayList<LinkedList> createLevelList(Node root) {
 
 	while(current.size() > 0) {
 		results.add(current);
-		List parents = current;
+		List parents = current; //save
 		current = new LinkedList();
 		
 		for(Node p: parents) {
