@@ -10,6 +10,15 @@ public void addNewNumber(int randomNumber) {
 			//randomNumber is bigger so minHeap should contain
 			maxHeap.offer(minHeap.poll());
 			minHeap.offer(randomNumber);
+		} else {
+			maxHeap.offer(randomNumber);
+		}
+	} else {
+		if (maxHeap.peek() < randomNumber) {
+			minHeap.offer(maxHeap.poll();
+			maxHeap.offer(randomNumber);
+		} else {
+			minHeap.offer(randomNumber);
 		}
 	}
 }
